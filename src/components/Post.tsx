@@ -1,4 +1,6 @@
 import React from 'react';
+import LikeButton from './LikeButton';
+
 
 interface PostProps {
   username: string;
@@ -10,6 +12,7 @@ const Post: React.FC<PostProps> = ({ username, content }) => {
     <div className="post">
       <h3>{username}</h3>
       <p>{content}</p>
+      <LikeButton /> {/* Renderiza o componente LikeButton dentro do componente Post */}
     </div>
   );
 };
